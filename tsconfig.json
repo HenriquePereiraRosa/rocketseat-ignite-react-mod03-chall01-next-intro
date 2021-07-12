@@ -23,7 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.spec.tsx"
-  ],
+, "src/pages/api/joke"  ],
   "exclude": [
     "node_modules"
   ]
