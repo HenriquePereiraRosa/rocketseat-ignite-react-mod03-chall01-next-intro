@@ -1,5 +1,8 @@
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import React from 'react';
 import Header from '../components/Header';
+
 
 import { getPrismicClient } from '../services/prismic';
 
@@ -28,9 +31,12 @@ interface HomeProps {
 export default function Home(): JSX.Element {
   return (
     <>
-     <Header/>
-     <h1>Hello there!</h1>
-     </>
+      <Head>
+        <title>Home | IgPosts</title>
+      </Head>
+      <Header />
+      <h1>Hello there!</h1>
+    </>
   )
 }
 

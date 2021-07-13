@@ -2,7 +2,56 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Inter;
 }
 
 // TODO
+
+:root {
+  --gray-000: #ffffff;
+  --gray-100: #e1e1e1;
+  --gray-500: #808080;
+  --gray-800: #323232;
+  --gray-900: #191919;
+  --gray-999: #000000;
+
+  --cian-500: #61dafb;
+  
+  --yellow-500: #e2cc00;
+}
+
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+
+body {
+  background-color: var(--gray-800);
+  color: var(--gray-100);
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Inter", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
