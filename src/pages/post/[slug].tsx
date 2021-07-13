@@ -26,9 +26,42 @@ interface PostProps {
   post: Post;
 }
 
-// export default function Post() {
-//   // TODO
-// }
+export default function Post() {
+  return (
+    <>
+      <Head>
+        <title>Post | IgPosts</title>
+      </Head>
+      <Header />
+
+      <main>
+        <div>
+          <a>
+            <time>13 de julho de 2021</time>
+            <strong>This is a POst </strong>
+            <p>Lorem Ipsum Lorem ipsum Lorem Loerem Wingadium Leviousa</p>
+          </a>
+        </div>
+        
+        <div>
+          <a>
+            <time>13 de julho de 2021</time>
+            <strong>This is a POst </strong>
+            <p>Lorem Ipsum Lorem ipsum Lorem Loerem Wingadium Leviousa</p>
+          </a>
+        </div>
+        
+        <div>
+          <a>
+            <time>13 de julho de 2021</time>
+            <strong>This is a POst </strong>
+            <p>Lorem Ipsum Lorem ipsum Lorem Loerem Wingadium Leviousa</p>
+          </a>
+        </div>
+      </main>
+    </>
+  )
+}
 
 // export const getStaticPaths = async () => {
 //   const prismic = getPrismicClient();

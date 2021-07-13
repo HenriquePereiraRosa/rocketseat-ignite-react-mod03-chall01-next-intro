@@ -1,10 +1,11 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import React from 'react';
+// import React from 'react';
+import Prismic from '@prismicio/client';
+import { getPrismicClient } from '../services/prismic';
+
 import Header from '../components/Header';
 
-
-import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
@@ -40,9 +41,15 @@ export default function Home(): JSX.Element {
   )
 }
 
-// export const getStaticProps = async () => {
-//   // const prismic = getPrismicClient();
-//   // const postsResponse = await prismic.query(TODO);
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+  const postsResponse = await prismic.query(
+    Prismic.predicates.at('document.type', 'post')
+  );
 
-//   // TODO
-// };
+  console.log(postsResponse);
+
+  return {
+    props: {},
+  };
+};
